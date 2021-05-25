@@ -9,7 +9,7 @@ before_install:
 scripts:
   - docker run -e CI=true superknife0512/fe-react npm test
 
-after_install:
+after_success:
   - docker build -t superknife0512/fe-react ./fe-react
   - docker build -t superknife0512/server ./server
   - docker build -t superknife0512/nginx ./nginx
