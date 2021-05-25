@@ -21,3 +21,4 @@ after_install:
   - docker push superknife0512/server
   - docker push superknife0512/nginx
   - docker push superknife0512/worker
+  - echo "DONE"
