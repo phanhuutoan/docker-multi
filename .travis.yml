@@ -4,10 +4,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t superknife0512/fe-react -f ./fe-react/Dockerfile.dev ./fe-react
+  - docker build -t superknife0512/multi-fe-react -f ./fe-react/Dockerfile.dev ./fe-react
 
 scripts:
-  - docker run -e CI=true superknife0512/fe-react npm test
+  - docker run -e CI=true superknife0512/multi-fe-react npm test
 
 after_success:
   - docker build -t superknife0512/multi-fe-react ./fe-react
